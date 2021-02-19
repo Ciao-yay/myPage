@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 必须的 meta 标签 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap 的 CSS 文件 -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2377687_qjf8xz4csdl.css
+  ">
+
+  <title>Hello, world!</title>
+  <style>
+    /*包含以下四种的链接*/
+    a {
+      text-decoration: none;
+    }
+
+    /*正常的未被访问过的链接*/
+    a:link {
+      text-decoration: none;
+    }
+
+    /*已经访问过的链接*/
+    a:visited {
+      text-decoration: none;
+    }
+
+    /*鼠标划过(停留)的链接*/
+    a:hover {
+      text-decoration: none;
+    }
+
+    /* 正在点击的链接*/
+    a:active {
+      text-decoration: none;
+    }
+
+    .v-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -9999;
+      -webkit-filter: grayscale(20%);
+    }
+
+    .main {
+      margin-top: 12%;
+      opacity: 0.7;
+    }
+
+
+    .avatar {
+      width: 80px;
+      margin-top: 5%;
+      border-radius: 50%;
+    }
+
+    .otherLink {
+      width: 60%;
+      margin-bottom: 5%;
+    }
+
+    .otherLink>.row>div:hover {
+      transition: color .5s;
+      color: #ff0000
+    }
+
+    .otherLink>.row>div {
+      transition: color .5s;
+    }
+
+    .content-icon .iconfont {
+      font-size: 2rem;
+    }
+
+    .content-name {
+      font-size: .75rem;
+    }
+
+    .contact {
+      width: 70%;
+      margin-bottom: 5%;
+    }
+
+    .contact-icon {
+      transition: color .5s;
+    }
+
+    .contact-icon .iconfont {
+      font-size: 1.3rem;
+    }
+
+    .contact-icon:hover {
+      transition: color .5s;
+      color: #ff0000
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <video class="v-bg" src="./videos/dawn.mp4" loop="loop" autoplay="autoplay" muted></video>
+  <div class="container main">
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-2 col-sm-1 "></div>
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="card mb-3">
+          <div class="text-center">
+            <img src="/images/avatar.jpg" class="avatar" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Truthy.</h5>
+            <p class="card-text">有朋自远方来，不亦说乎~</p>
+            <div class="container otherLink">
+              <div class="row">
+                <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
+                  <div class="content-icon">
+                    <i class="iconfont icon-wenzhang"></i>
+                  </div>
+                  <div class="content-name">博客</div>
+                </div>
+                <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
+                  <div class="content-icon">
+                    <i class="iconfont icon-idea"></i>
+                  </div>
+                  <div class="content-name">作品</div>
+                </div>
+                <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
+                  <div class="content-icon">
+                    <i class="iconfont icon-about"></i>
+                  </div>
+                  <div class="content-name">关于</div>
+                </div>
+              </div>
+            </div>
+            <div class="contact container">
+              <div class="row">
+                <div class="col contact-icon  col-lg-2 col-md-2 col-sm-2 col-2">
+                  <i class="iconfont icon-GitHub"></i>
+                </div>
+                <div class="col contact-icon  col-lg-2 col-md-2 col-sm-2 col-2">
+                  <i class="iconfont icon-youxiang4"></i>
+                </div>
+                <div class="col contact-icon  col-lg-2 col-md-2 col-sm-2 col-2">
+                  <i class="iconfont icon-tuite"></i>
+                </div>
+                <div class="col contact-icon  col-lg-2 col-md-2 col-sm-2 col-2">
+                  <i class="iconfont icon-instagram"></i>
+                </div>
+                <div class="col contact-icon  col-lg-2 col-md-2 col-sm-2 col-2">
+                  <i class="iconfont icon-QQ"></i>
+                </div>
+                <div class="col contact-icon  col-lg-2 col-md-2 col-sm-2 col-2">
+                  <i class="iconfont icon-weibo"></i>
+                </div>
+              </div>
+
+            </div>
+            <p class="card-text"><small class="text-muted">欲买桂花同载酒，终不似，少年游</small></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    $('.otherLink>.row').delegate('.col', 'click', function () {
+      const name = $(this).text().trim()
+      switch (name) {
+        case "博客":
+          window.open('https://nciao.gitee.io/myblog/');
+          break;
+        case "作品":
+          window.open('https://dms.nciao.com');
+          break;
+        // case "关于":
+        //   $(location).attr('href', 'https://nciao.gitee.io/myblog/');
+        //   break;
+        default:
+          break;
+      }
+    })
+    $('.contact>.row>.col').click(function () {
+      // console.log($(this).index())
+      const i = $(this).index()
+      switch (i) {
+        case 0:
+          window.open('https://github.com/Ciao-yay');
+          break;
+        case 1:
+          window.open('http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-pCRiJvQzs__j4-QnZGT');
+          break;
+        case 2:
+          window.open('https://www.twitter.com/Nove68818473');
+          break;
+        case 3:
+          window.open('https://www.instagram.com/truthy50/');
+          break;
+        case 4:
+          window.open('https://qm.qq.com/cgi-bin/qm/qr?k=gqPFb0jkuFoEkHjfUK8noYVb4WrAjenA&noverify=0');
+          break;
+        case 5:
+          // $(location).attr('href', 'https://weibo.com/Nove01');
+          window.open('https://weibo.com/Nove01')
+          break;
+        default:
+          break;
+      }
+    })
+
+  </script>
+</body>
+
+</html>
