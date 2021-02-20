@@ -5,103 +5,13 @@
   <!-- 必须的 meta 标签 -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  
   <!-- Bootstrap 的 CSS 文件 -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_2377687_qjf8xz4csdl.css
-  ">
-
-  <title>Hello, world!</title>
-  <style>
-    /*包含以下四种的链接*/
-    a {
-      text-decoration: none;
-    }
-
-    /*正常的未被访问过的链接*/
-    a:link {
-      text-decoration: none;
-    }
-
-    /*已经访问过的链接*/
-    a:visited {
-      text-decoration: none;
-    }
-
-    /*鼠标划过(停留)的链接*/
-    a:hover {
-      text-decoration: none;
-    }
-
-    /* 正在点击的链接*/
-    a:active {
-      text-decoration: none;
-    }
-
-    .v-bg {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -9999;
-      -webkit-filter: grayscale(20%);
-    }
-
-    .main {
-      margin-top: 12%;
-      opacity: 0.7;
-    }
-
-
-    .avatar {
-      width: 80px;
-      margin-top: 5%;
-      border-radius: 50%;
-    }
-
-    .otherLink {
-      width: 60%;
-      margin-bottom: 5%;
-    }
-
-    .otherLink>.row>div:hover {
-      transition: color .5s;
-      color: #ff0000
-    }
-
-    .otherLink>.row>div {
-      transition: color .5s;
-    }
-
-    .content-icon .iconfont {
-      font-size: 2rem;
-    }
-
-    .content-name {
-      font-size: .75rem;
-    }
-
-    .contact {
-      width: 70%;
-      margin-bottom: 5%;
-    }
-
-    .contact-icon {
-      transition: color .5s;
-    }
-
-    .contact-icon .iconfont {
-      font-size: 1.3rem;
-    }
-
-    .contact-icon:hover {
-      transition: color .5s;
-      color: #ff0000
-    }
-  </style>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2377687_qjf8xz4csdl.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" th:href="@{./favicon.ico}" type="image/x-icon">
+  <title>Truthy.</title>
 </head>
 
 <body>
@@ -110,6 +20,7 @@
     crossorigin="anonymous"></script>
   <script src="./js/bootstrap.min.js"></script>
   <video class="v-bg" src="./videos/dawn.mp4" loop="loop" autoplay="autoplay" muted></video>
+  <img src="./images/bg.png" class="v-bg">
   <div class="container main">
     <div class="row text-center">
       <div class="col-lg-3 col-md-2 col-sm-1 "></div>
@@ -164,7 +75,6 @@
                   <i class="iconfont icon-weibo"></i>
                 </div>
               </div>
-
             </div>
             <p class="card-text"><small class="text-muted">欲买桂花同载酒，终不似，少年游</small></p>
           </div>
@@ -173,52 +83,7 @@
 
     </div>
   </div>
-  <script>
-    $('.otherLink>.row').delegate('.col', 'click', function () {
-      const name = $(this).text().trim()
-      switch (name) {
-        case "博客":
-          window.open('https://nciao.gitee.io/myblog/');
-          break;
-        case "作品":
-          window.open('https://dms.nciao.com');
-          break;
-        // case "关于":
-        //   $(location).attr('href', 'https://nciao.gitee.io/myblog/');
-        //   break;
-        default:
-          break;
-      }
-    })
-    $('.contact>.row>.col').click(function () {
-      // console.log($(this).index())
-      const i = $(this).index()
-      switch (i) {
-        case 0:
-          window.open('https://github.com/Ciao-yay');
-          break;
-        case 1:
-          window.open('http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-pCRiJvQzs__j4-QnZGT');
-          break;
-        case 2:
-          window.open('https://www.twitter.com/Nove68818473');
-          break;
-        case 3:
-          window.open('https://www.instagram.com/truthy50/');
-          break;
-        case 4:
-          window.open('https://qm.qq.com/cgi-bin/qm/qr?k=gqPFb0jkuFoEkHjfUK8noYVb4WrAjenA&noverify=0');
-          break;
-        case 5:
-          // $(location).attr('href', 'https://weibo.com/Nove01');
-          window.open('https://weibo.com/Nove01')
-          break;
-        default:
-          break;
-      }
-    })
-
-  </script>
+  <script src="/js/app.js"></script>
 </body>
 
 </html>
